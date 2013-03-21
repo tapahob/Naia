@@ -1,0 +1,17 @@
+[INFO] Logger initialized
+Fri Mar 08 02:18:00 2013
+ [INFO] Logger initialized
+Fri Mar 08 02:21:05 2013
+ [INFO] Logger initialized
+Fri Mar 08 02:25:30 2013
+ [INFO] Logger initialized
+2:32:41 [INFO] Logger initialized
+4:10:15 [INFO] Logger initialized
+4:10:15 [INFO] Initializing windows
+4:10:15 [INFO] Initializing windowed mode
+4:10:15 [INFO] Windowed mode initialized
+4:10:15 [INFO] Initializing the input system
+4:10:15 [INFO] All systems are initialized
+4:10:34 [INFO] the input system has been destroyed
+4:10:34 [INFO] Shutting down the window
+4:10:34 [INFO] Cleanup complete

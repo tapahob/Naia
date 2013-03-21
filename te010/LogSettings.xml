@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Root>
+  <Setting tag="INFO" debugger="0" file="1" />
+  <Setting tag="FATAL" debugger="1" file="1" />
+  <Setting tag="ERROR" debugger="1" file="1" />
+</Root>

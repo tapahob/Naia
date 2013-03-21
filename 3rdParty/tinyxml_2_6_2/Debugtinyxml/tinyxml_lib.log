@@ -1,0 +1,22 @@
+﻿Build started 08.03.2013 1:24:32.
+     1>Project "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\tinyxml_lib.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         E:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\\" /Fd"C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxml.pdb" /FR"C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\\" /Gd /TP /analyze- /errorReport:prompt tinystr.cpp tinyxml.cpp tinyxmlerror.cpp tinyxmlparser.cpp
+         tinyxmlparser.cpp
+         tinyxmlerror.cpp
+         tinyxml.cpp
+         tinystr.cpp
+         Generating Code...
+       Lib:
+         E:\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxml.lib" /NOLOGO "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinystr.obj"
+         "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxml.obj"
+         "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxmlerror.obj"
+         "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxmlparser.obj"
+         tinyxml_lib.vcxproj -> C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxml.lib
+       BscMake:
+         E:\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxml.bsc" "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinystr.sbr" "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxml.sbr" "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxmlerror.sbr" "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\Debugtinyxml\tinyxmlparser.sbr"
+     1>Done Building Project "C:\Users\Администратор\Documents\Visual Studio 2012\Projects\te010\3rdParty\tinyxml_2_6_2\tinyxml_lib.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.19
