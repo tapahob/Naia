@@ -196,8 +196,8 @@ void LogManager::GetOutputBuffer(std::string& outOutputBuffer, const std::string
 	struct tm * timeinfo;
 
 	time ( &rawtime );
-	timeinfo = localtime ( &rawtime );
-
+#pragma warning(disable:4996)
+	timeinfo = localtime( &rawtime );
 
 	outOutputBuffer = ToStr(timeinfo->tm_hour) +":"+ToStr(timeinfo->tm_min)+":"+ToStr(timeinfo->tm_sec);
 	if (!tag.empty())

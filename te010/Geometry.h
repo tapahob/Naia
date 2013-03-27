@@ -55,13 +55,13 @@ inline Vec3::Vec3(const Vec4 & vector4) { x = vector4.x; y = vector4.y; z = vect
 //-------------------------------------------------------------------
 //	Globals
 //-------------------------------------------------------------------
-Vec3 g_Right(1.0f, 0.0f, 0.0f);
-Vec3 g_Up(0.0f, 1.0f, 0.0f);
-Vec3 g_Forward(0.0f, 0.0f, 1.0f);
+static Vec3 g_Right(1.0f, 0.0f, 0.0f);
+static Vec3 g_Up(0.0f, 1.0f, 0.0f);
+static Vec3 g_Forward(0.0f, 0.0f, 1.0f);
 
-Vec4 g_Up4(g_Up.x, g_Up.y, g_Up.z, 0.0f);
-Vec4 g_Right4(g_Right.x, g_Right.y, g_Right.z, 0.0f);
-Vec4 g_Forward4(g_Forward.x, g_Forward.y, g_Forward.z, 0.0f);
+static Vec4 g_Up4(g_Up.x, g_Up.y, g_Up.z, 0.0f);
+static Vec4 g_Right4(g_Right.x, g_Right.y, g_Right.z, 0.0f);
+static Vec4 g_Forward4(g_Forward.x, g_Forward.y, g_Forward.z, 0.0f);
 
 //-------------------------------------------------------------------
 //	Vec3List, Vec4List description
@@ -118,7 +118,7 @@ public:
 	inline Vec3   Xform(Vec3 & vector) const;
 	inline Mat4x4 Inverse() const;
 
-	Mat4x4(D3DXMATRIX & matrix) { memccpy(&m, &matrix.m, sizeof(matrix.m)); }
+	Mat4x4(D3DXMATRIX & matrix) { memcpy(&m, &matrix.m, sizeof(matrix.m)); }
 	Mat4x4() : D3DXMATRIX() { };
 
 	static const Mat4x4 g_Identity;
@@ -338,7 +338,7 @@ inline void Plane::Normalize()
 
 inline void Plane::Init(const Vec3 & p1, const Vec3 & p2, const Vec3 & p3)
 {
-	D3DXPlaneFromPoints(this, &p1, &p2, p3);
+	D3DXPlaneFromPoints(this, &p1, &p2, &p3);
 	Normalize();
 }
 
@@ -372,8 +372,8 @@ public:
 
 	void SetFOV(float fov) { m_Fov = fov; Init(m_Fov, m_Aspect, m_Near, m_Far); }
 	void SetAspect(float aspect) { m_Aspect = aspect; Init(m_Fov, m_Aspect, m_Near, m_Far); }
-	void SetNear(float near) { m_Near = near; Init(m_Fov, m_Aspect, m_Near, m_Far); }
-	void SetFar(float far) { m_Far = far; Init(m_Fov, m_Aspect, m_Near, m_Far); }
+	void SetNear(float _near) { m_Near = _near; Init(m_Fov, m_Aspect, m_Near, m_Far); }
+	void SetFar(float _far) { m_Far = _far; Init(m_Fov, m_Aspect, m_Near, m_Far); }
 
 	void Render();
 };
