@@ -1,5 +1,5 @@
 #include "precompiled.h"
-
+#include "Application.h"
 
 //-------------------------------------------------------------------
 //	Construction

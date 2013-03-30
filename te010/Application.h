@@ -1,4 +1,6 @@
 #pragma once
+#ifndef HREN_H
+#define HREN_H
 class Application
 {
 public:
@@ -13,7 +15,18 @@ public:
 	void Shutdown();
 	void Run();
 
+	static Application *instance()
+	{
+		if (!s_instance)
+			s_instance = new Application;
+		return s_instance;
+	}
+
 	LRESULT CALLBACK MessageHandler(HWND, UINT, WPARAM, LPARAM);
+
+	int  m_Width, m_Height;
+	HWND m_Hwnd;
+	bool m_IsFullScreen;
 
 private:
 	bool Frame(void);
@@ -23,10 +36,12 @@ private:
 private:
 	LPCWSTR	  m_ApplicationName;
 	HINSTANCE m_Instance;
-	HWND      m_Hwnd;
-	int		  m_Width, m_Height;
-	bool	  m_IsFullScreen;
+	static Application* s_instance;
+	
+	
 };
 
 // Global pointer
-static Application* g_Application = 0;
+//Application* Application::s_instance = 0;
+
+#endif

@@ -8,23 +8,22 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
 	UNREFERENCED_PARAMETER( lpCmdLine );
 
 	bool result;
-
-	Application* application = new Application;
-	if (!application)
+	
+	/*g_Application = new Application;
+	if (!g_Application)
 	{
 		return 0;
 	}
-	
+	*/
 	// Initialize everything and start main loop
-	result = application->Initialize();
+	result = Application::instance()->Initialize();
 	if (result)
 	{
-		application->Run();
+		Application::instance()->Run();
 	}
 
-	application->Shutdown();
-	delete application;
-	application = 0;
+	Application::instance()->Shutdown();
+	delete Application::instance();
 
 	return 0;
 }

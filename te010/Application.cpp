@@ -64,7 +64,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		}
 	default:
 		{
-			return g_Application->MessageHandler(hwnd, msg, wparam, lparam);
+			return Application::instance()->MessageHandler(hwnd, msg, wparam, lparam);
 		}
 	}
 }
@@ -80,7 +80,7 @@ void Application::InitializeWindows(int & screenWidth, int & screenHeight)
 	DEVMODE dmScreenSettings;
 	int posX, posY;
 
-	g_Application     = this;
+	//g_Application     = this;
 	m_Instance        = GetModuleHandle(NULL);
 	m_ApplicationName = L"tEngine";
 
@@ -150,12 +150,17 @@ bool Application::Initialize(void)
 	
 	InitializeWindows(m_Width, m_Height);
 
+	//g_Application = this;
 	g_Input = new Input;
 	if (!g_Input)
 	{
 		return false;
 	}
 	g_Input->Initialize();
+
+	g_Graphics = new Graphics;
+
+	g_Graphics->Initialize();
 
 	NAIA_INFO("All systems are initialized");
 	return true;
@@ -181,13 +186,19 @@ void Application::ShutdownWindows(void)
 	UnregisterClass(m_ApplicationName, m_Instance);
 	m_Instance = NULL;
 
-	g_Application = NULL;
+//	g_Application = NULL;
 
 	return;
 }
 
+Application* Application::s_instance = 0;
+
 void Application::Shutdown(void)
 {
+	if (g_Graphics)
+	{
+		g_Graphics->Destroy();
+	}
 	if (g_Input)
 	{
 		delete g_Input;
@@ -238,20 +249,15 @@ void Application::Run(void)
 
 bool Application::Frame(void)
 {
-//	bool result;
 
 	if(g_Input->IsKeyDown(VK_ESCAPE))
 	{
 		return false;
 	}
 
-	//// Do the frame processing for the graphics object.
-	//result = m_Graphics->Frame();
-	//if(!result)
-	//{
-	//	return false;
-	//}
+	g_Graphics->Render();
 
 	return true;
 }
+
 

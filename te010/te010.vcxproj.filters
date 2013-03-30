@@ -54,6 +54,9 @@
     <ClCompile Include="TransformComponent.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="precompiled.h">
@@ -92,8 +95,16 @@
     <ClInclude Include="TransformComponent.h">
       <Filter>Actors</Filter>
     </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="LogSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DefaultShader.fx">
+      <Filter>Graphics</Filter>
+    </Resource>
   </ItemGroup>
 </Project>

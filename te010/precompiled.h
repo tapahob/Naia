@@ -33,3 +33,4 @@ using std::tr1::weak_ptr;
 #include "ActorComponent.h"
 #include "TransformComponent.h"
 #include "Graphics.h"
+#include "Material.h"
